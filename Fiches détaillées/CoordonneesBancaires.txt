@@ -1,0 +1,16 @@
+Titre: Ajouter coordonnées bancaires
+Acteur: Joueur
+Description: 
+
+Pré-requis: Authentification effectuée
+
+
+SN: SN1:   Le joueur choisit de remplir/modifier coordonnées bancaires
+    SN1:   Le systeme affiche un formulaire de coordonnées bancaires et un bouton "Continuer"
+    SN2:   Le visiteur remplit le formulaire et appuie sur continuer
+    SN3:   Le syteme verifie si ces coordonnées sont au bon format
+    SN4:   Le systeme les enregistre 
+    
+    
+    A1:  Données bancaires au mauvais format
+         En SN10 Si les coordonnées sont au mauvais format retour en SN9    
