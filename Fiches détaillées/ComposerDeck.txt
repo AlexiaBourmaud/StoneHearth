@@ -1,0 +1,37 @@
+Titre: ComposerDeck
+Auteur:Joueur connecté
+Description:L'utilisateur souhaite composer un deck avec les cartes de sa collection.
+
+Pre-condition: L'utilisateur est connecté.
+
+SN:
+1.L'utilisateur clique sur "Composer un deck"
+2.Le système affiche "Selectionner le deck que vous souhaitez composer"
+3.L'utilisateur selectionne un deck.
+4.Le système affiche "voulez vous ajouter ou suprimer une carte?".
+5.L'utilisateur selectionne "ajouter une carte".
+6.Le système vérifie qu'il reste au moins un emplacement vide dans le deck selectionné.
+7.Le système affiche "Selectionnez une carte à ajouter".
+8.Le système affiche les cartes que possède l'utilisateur classées pas ordre de rareté: les cartes "basiques", puis les "communes", puis les "rares", puis les "légendaires".
+9.L'utilisateur selectionne une carte à ajouter.
+10.Le système ajoute la carte selectionnée dans le deck;
+11.Le système demande "voulez vous continuer la modification de vos decks".
+12.Le joueur décline.
+
+Post-condition: Les decks sont modifiés.
+
+Alternatives: 
+A1.L'utilisateur selectionne "retirer une carte".
+	A1.1 Le système vérifie s'il existe au moins une carte dan le deck.
+	A1.2 Le système demande "Selectionnez une carte à retirer".
+	A1.3 Le système affiche les cartes du deck.
+	A1.4 L'utilisateur selectionne une carte à retirer.
+	A1.5 Le système supprime la carte selectionnée du deck, retour en SN11. 
+A2.L'utilisateur souhaite continuer de modifier ses decks, retour en SN1.
+
+
+Exceptions:
+E1.L'utilisateur annule l'interaction en SN3, SN5, fin de l'interaction.
+
+
+
