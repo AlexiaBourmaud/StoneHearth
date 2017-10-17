@@ -1,0 +1,15 @@
+TV01: Déconnexion
+
+Contexte: "M" est connecté. Le système affiche l'écran d'accueil.
+
+Entrées: Aucune
+
+Scénario:
+
+1. M clique sur déconnexion.
+	
+RA:	-> Le système affiche la page de connexion/inscription.
+	-> M est déconnecté.
+	
+MV: -> Affichages visuels
+	-> Listez les joueurs connectés
