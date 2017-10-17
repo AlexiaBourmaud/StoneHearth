@@ -1,0 +1,105 @@
+TV01 : acheterCarte nominal
+Contexte : le joueur est connecté, 
+					 il possède au moins 20 joyaux,
+					 "C1" est une carte commune
+					
+Entrée :		carte="C1"
+
+Scénario :	1. Le joueur choisit "acheter une carte"
+						2. Le joueur sélectionne la carte "C1"
+						3. Le joueur achète la carte "C1"
+						4. Le joueur termine 
+						
+Résultat attendu :	-Afficher le message "Vous venez d'acquérir la carte 'C1' et votre solde a été débité de 20 joyaux"
+										-Le joueur possède la carte "C1"
+										-Le solde du joueur a été décrémenté de 20 joyaux
+										
+Moyen de validation : -vérification visuelle du message
+											-visualiser la collection du joueur
+											-visualiser le solde du joueur 
+
+
+
+TV02 : acheterCarte infirme son achat
+Contexte :	le joueur est connecté, 
+					  il possède au moins 20 joyaux,
+					  "C1" est une carte commune
+					  
+Entrée :		carte="C1"
+
+Scénario :	1. Le joueur choisit "acheter une carte"
+						2. Le joueur sélectionne la carte "C1"
+						3. Le joueur ne confirme pas l'achat
+						4. Le joueur termine 
+						
+Résultat attendu :	-Afficher le message "Vous n'avez pas valider votre choix de la carte 'C1', votre solde n'a pas été débité"
+										-Le joueur ne possède pas la carte "C1"
+										-Le solde du joueur n'a pas été décrémenté de 20 joyaux
+										
+Moyen de validation : -vérification visuelle du message
+											-visualiser la collection du joueur
+											-visualiser le solde du joueur 
+											
+TV03 : acheterCarte n'achète pas
+Contexte :	le joueur est connecté, 
+					  il possède au moins 20 joyaux,
+					  "C1" est une carte commune
+					  
+Entrée :		carte="C1"
+
+Scénario :	1. Le joueur choisit "acheter une carte"
+						2. Le joueur sélectionne la carte "C1"
+						3. Le joueur ne confirme pas l'achat
+						4. Le joueur termine 
+						
+Résultat attendu :	-Afficher le message "Vous n'avez pas valider votre choix de la carte 'C1', votre solde n'a pas été débité, retour à l'affichage des cartes"
+										-Le joueur ne possède pas la carte "C1"
+										-Le solde du joueur n'a pas été décrémenté de 20 joyaux
+										
+Moyen de validation : -vérification visuelle du message
+											-visualiser la collection du joueur
+											-visualiser le solde du joueur 
+				
+				
+										
+TV04 : acheterCarte pas assez de joyaux
+Contexte : le joueur est connecté, 
+					 le joueur possède moins de 20 joyaux,
+					 "C1" est une carte commune
+					
+Entrée :		carte="C1"
+
+Scénario :	1. Le joueur choisit "acheter une carte"
+						2. Le joueur sélectionne la carte "C1"
+						3. Le joueur achète la carte "C1"
+						4. Le joueur termine 
+						
+Résultat attendu :	-Afficher le message "Vous n'avez pas suffisament de joyaux pour acheter cette carte"
+										-Le joueur ne possède pas la carte "C1"
+										-Le solde du joueur n'a pas été décrémenté de 20 joyaux
+										
+Moyen de validation : -vérification visuelle du message
+											-visualiser la collection du joueur
+											-visualiser le solde du joueur 
+											
+
+
+TV05 : acheterCarte annulation de l'achat
+Contexte : le joueur est connecté, 
+					 le joueur possède moins de 20 joyaux,
+					 "C1" est une carte commune
+					
+Entrée :		carte="C1"
+
+Scénario :	1. Le joueur choisit "acheter une carte"
+						2. Le joueur sélectionne la carte "C1"
+						3. Le joueur annule son achat
+						4. Le joueur termine 
+						
+Résultat attendu :	-Afficher le message "Retour au menu principal"
+										-Le joueur ne possède pas la carte "C1"
+										-Le solde du joueur n'a pas été décrémenté de 20 joyaux
+										
+Moyen de validation : -vérification visuelle du message
+											-visualiser la collection du joueur
+											-visualiser le solde du joueur 
