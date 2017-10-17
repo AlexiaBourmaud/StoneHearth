@@ -17,8 +17,8 @@ SN:
     SN8:   Le Système incrémente, respectivement décrémente le rang du joueur s'il a gagné,
            respectivement perdu 
     SN9:   Le Système enregistre le résultat de la partie, la date.
-    SN10:  Le système regarde l'historique de parties du joueur.
-    SN11:  Le joueur reçoit un pack si les conditions sont respectées(2 pack maxi toute les 24h)
+    SN10:  Le Système regarde l'historique de parties du joueur.
+    SN11:  Le Système donne un pack au joueur si les conditions sont respectées(2 pack maxi toute les 24h)
     
     
 ERREUR:
