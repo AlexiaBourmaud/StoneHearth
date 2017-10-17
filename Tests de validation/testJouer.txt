@@ -1,4 +1,4 @@
-TV01: Jouer une partie
+TV01: Jouer une partie 
 
 Contexte: "yann" est connecté, il a memorisé un deck, et la liste des joueurs en attente de son rang n'est pas vide. 
 
