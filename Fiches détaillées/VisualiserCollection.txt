@@ -6,18 +6,12 @@ Pre-condition:L'utilisateur est connecté.
 
 SN:
 1.L'utilisateur clique sur "Voir ma collection de cartes".
-2.Le système propose différents affichages de la collection "affichage par ordre de rareté","affichage par deck","affichage des doublons".
-3.L'utilisateur selectionne "affichage par ordre de rareté".
-4.Le système affiche les cartes que possède l'utilisateur classées par ordre de rareté "basique" en premier, "commun" en deuxième, "rare" en troisième et "légendaire" à la fin.
+2.Le système affiche les cartes que possède l'utilisateur classées par ordre de rareté "basique" en premier, "commun" en deuxième, "rare" en troisième et "légendaire" à la fin.
 
 
 Post-conditions:
+- Les cartes de la collection du joueur doivent s'afficher.
 
 Alternatives:
-A1.L'utilisateur selectionne "affichage par deck" en SN3,
-	A1.1 Le système affiche les cartes que possède l'utilisateur dans chacun de ses decks, dans chaque deck les cartes sont classée par rareté.
-A2. L'utilisateur sélectionne "Affichage des doublons."
-	A2.2 Le système affiche les cartes que l'utilisateur possède en plusieurs exemplaires, triées en fonction de leur raretée.
 
 Exceptions:
-E1. L'utilisateur annule la visualisation des cartes de la collection en SN3, fin de l'interaction.
