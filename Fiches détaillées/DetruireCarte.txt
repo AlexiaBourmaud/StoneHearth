@@ -8,13 +8,9 @@ SN:
 2.Le système affiche les cartes qui peuvent être détruites par l'utilisateur, à savoir les cartes "communes", "rares" et "légendaires" que possède l'utilisateur dans sa collection. Le système classe les cartes par ordre décroissant selon leurs nombres d'exemplaires possédés par l'utilisateur et leur prix de vente en joyaux. Une carte "commune" rapporte 2 joyaux, une carte "rare" rapporte 5 joyaux, une carte "légendaire" rapporte 20 joyaux.
 3.Le système affiche "sélectionner une carte à détruire".
 4.L'utilisateur sélectionne une carte.
-5.Le système affiche la description de la carte sélectionnée.
-6.Le sytème demande "voulez vous détruire cette carte ?"
-7.L'utilisateur confirme la destruction de la carte.
-8.Le système détrui la carte.
-9.Le système affiche le nouveau solde en joyaux de l'utilisateur, incrémenté de 2, 5 ou 20 joyaux selon la carte détruite.
-10.Le système affiche "Voulez vous détruire une autre carte ?".
-11.L'utilisateur décline.
+5.Le système détrui la carte.
+6.Le système affiche "Voulez vous détruire une autre carte ?".
+7.L'utilisateur décline.
 
 
 Post-condition: 
@@ -22,14 +18,12 @@ La carte disparait de la collection de l'utilisateur.
 Le solde de l'utilisateur se voit incrementé selon la nature de la carte detruite.
 
 Alternatives:
-A1. L'utilisateur annule la destruction de la carte selectionnée en SN6, retour en SN2.
-A2. L'utilisateur souhaite detruite une autre carte en SN11, retour en SN2.
+A1. L'utilisateur souhaite detruite une autre carte en SN11, retour en SN2.
 							A2.1 Si la liste est vide le système affiche "Vous n'avez plus de carte à détruire", fin de l'interaction.	 
 							A2.2 Retour en SN2.
 
 
 Exceptions:
-E1. L'utilisateur annule la destruction d'une carte en SN4, SN2 ,fin de l'interaction.
-
+E1. L'utilisateur annule la destruction d'une carte en SN4, fin de l'interaction.
 
 
