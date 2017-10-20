@@ -1,0 +1,22 @@
+TV01: Acheter un pack
+
+Contexte: "yann" est connecté, il a de l'argent sur son compte en banque, Il a rentré ses coordonnées bancaires.
+
+Scénario :
+
+1:  Le joueur choisit son pack
+2.  Le joueur appuie sur 'acheter'
+3.  Le joueur confirme son achat
+4.  Le joueur refuse un second achat
+
+RA:
+    -> Le joueur a bien été débité de la bonne somme
+    -> Le joueur a bien reçu au moins une carte
+    -> Le pack contient bien au moins une carte rare
+
+MV:
+    -> Vérifier sur son compte ne banque qu'il a bien été débité de la bonne somme
+    -> Vérifier que le joueur a bien reçu ses cartes
+    -> Verifier que le joueur a bien reçu au moins une carte rare.
+
+TV02:
