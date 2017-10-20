@@ -1,0 +1,51 @@
+TV01: Se connecter
+Contexte Le Joueur n'est pas connecté et veut se connecter a un compte déja crée a l'avance
+Entrées: identifiant="toto" mot de passe= "mdp123"
+Scénario :
+1.Le joueur choisit "Se connecter"
+2. Le joueur saisit son identifiant "toto" et son mot de passe "mdp123"
+3.Le joueur termine sa connection
+
+
+RA: Le système affiche la page de jeu
+
+MV: Affichages visuels
+Le joueur est bien dans la liste des joueurs connectés
+
+    TV02:faux mdp ou identifiant
+Contexte Le Joueur veut se connecter a un compte qui n'existe pas
+Entrées: identifiant="toto" mot de passe= "mdp123"
+Scénario :
+1.Le joueur choisit "Se connecter"
+2. Le joueur saisit son identifiant "toto" et son mot de passe "mdp123"
+3.Le joueur termine sa connection
+
+
+RA: Le système affiche la page d'acceuil et le message d'erreur "L'identifiant ou le mot de passe incorect."
+
+MV: Affichages visuels
+
+    TV03: annuler la connexion
+Contexte Le Joueur annule sa connection
+Entrées:
+Scénario :
+1.Le joueur choisit "Se connecter"
+2. Le joueur annule sa connexion
+
+
+RA: Le système affiche la page d'acceuil.
+
+MV: Affichages visuels
+
+
+    TV04: connexion a un compte connecté
+ContexteLe Joueur veut se connecter a un compte qui est déjà connecté
+Entrées:identifiant="toto" mot de passe= "mdp123"
+Scénario :
+1.Le joueur choisit "Se connecter"
+2. Le joueur saisit son identifiant "toto" et son mot de passe "mdp123"
+3.Le joueur termine sa connection
+
+RA: Le système affiche la page d'acceuil et le message d'erreur "Le compte est déjà utilisé."
+
+MV: Affichages visuels
