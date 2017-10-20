@@ -1,0 +1,24 @@
+Titre: SeConnecter
+Auteur: Joueur non connecté
+Description: Cas d'utilisation durant lequel l'utilisateur se connecte à son compte.
+Pre-condition:
+
+SN:
+1.L'utilisateur clique sur "Se connecter"
+2.Le système affiche "saisir votre identifiant et votre mot de passe"
+3.L'utilisateur saisi son identifiant et son mot de passe.
+4.Le système vérifie que l'identifiant et le mot de passe correspondent à un compte utilisateur.
+5.Le système affiche "connection établie"
+
+Post-conditions: L'utilisateur est maintenant connecté à son compte. 
+
+Alternatives:
+A1. Erreur d'identification ou de mot de passe: En SN4, si l'identifiant et le mot de passe ne correspondent pas à un compte < 3 essaies : A1.1 retour en SN2. 
+					    A1.2 Sinon le système affiche "Avez vous dejà crée un compte ?" retour au cas d'utilisation, creer un compte.
+
+
+Exceptions:
+E1. L'utilisateur annule sa connection: en SN3 l'utilisateur clique sur "annuler la connection", fin de l'interaction.
+
+
+
