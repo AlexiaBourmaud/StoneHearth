@@ -18,7 +18,7 @@ La carte disparait de la collection de l'utilisateur.
 Le solde de l'utilisateur se voit incrementé selon la nature de la carte detruite.
 
 Alternatives:
-A1. L'utilisateur souhaite detruite une autre carte en SN11, retour en SN2.
+A1. L'utilisateur souhaite detruite une autre carte en SN7, retour en SN2.
 							A2.1 Si la liste est vide le système affiche "Vous n'avez plus de carte à détruire", fin de l'interaction.	 
 							A2.2 Retour en SN2.
 
