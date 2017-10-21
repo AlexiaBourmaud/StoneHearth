@@ -1,0 +1,136 @@
+TV01: Détruire une carte.
+
+
+
+Contexte: Le joueur connecté souhaite détruite une carte commune "C06", présente dans sa collection.
+
+Entrée: --
+
+
+
+SN:
+
+1.Le jour choisit "Détruire carte".
+
+2.Le joueur sélectionne la carte "C06" à détruire.
+
+3.Le joueur termine.
+
+
+
+RA:
+
+1.La carte précédente n'est plus présente dans la collection.
+
+2.Le solde a été incrémenté de 2 joyaux car la carte détruite était une carte commune.
+
+
+
+MV:
+
+1.Visualiser la collection du joueur, la carte "C06" n'y figure plus.
+
+2.Affiche le solde du joueur.
+
+
+TV02: Détruire une carte.
+
+Contexte: Le joueur connecté souhaite détruite une carte légendaire "L12", présente dans sa collection.
+	 
+
+Entrée: --
+
+
+SN:
+
+1.Le jour choisit "Détruire carte".
+
+2.Le joueur sélectionne la carte "L12" à détruire.
+
+3.Le joueur termine.
+
+
+
+RA:
+
+1.La carte précédente n'est plus présente dans la collection.
+
+2.Le solde a été incrémenté de 20 joyaux car la carte détruite était une carte légendaire.
+
+
+
+MV:
+
+1.Visualiser la collection du joueur, la carte "L12" n'y figure plus.
+
+2.Affiche le solde du joueur.
+
+
+TV03: Détruire une carte.
+
+
+Contexte: Le joueur connecté sélectionne la carte rare "R08" de sa collection pour la détruire.
+
+
+Entrée: --
+
+
+SN:
+
+1.Le jour choisit "Détruire carte".
+
+2.Le joueur sélectionne la carte "R08" à détruire.
+
+3.Le joueur termine.
+
+
+
+RA:
+
+1.La carte "R08" n'est plus présente dans la collection.
+
+2.Le solde a été incrémenté de 5 joyaux car la carte détruite était une carte rare.
+
+
+
+MV:
+
+1.Visualiser la collection du joueur, la carte "R08" n'y figure plus.
+
+2.Affiche le solde du joueur.
+
+
+
+TV04: Détruire une carte.
+
+
+
+Contexte: Le joueur connecté, souhaite détruire une carte mais annule l'opération.
+	  
+
+Entrée: --
+
+
+SN:
+
+1.Le jour choisit "Détruire carte".
+
+2.Le joueur choisit d'annuler.
+
+3.Le joueur termine.
+
+
+
+RA:
+
+1.La collection n'a pas été changé, toutes les cartes sont présentes .
+
+2.Le solde du joueur n'a pas changé.
+
+
+
+MV:
+
+1.Visualiser la collection du joueur pour verifier que les cartes avant l'operation sont toujours présentes.
+
+2.Affiche le solde du joueur pour verifier que celui-ci n'a pas été modifié.
