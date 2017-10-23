@@ -1,0 +1,15 @@
+diapo 1-2: Marc-Vincent
+diapo 3: Robert
+diapo 4: Alexia
+diapo 5: Vivien
+diapo 6: Louise 
+diapo 7-8: Steban 
+diapo 9: Nicolas
+diapo 10: Robert
+diapo 11: Nicolas
+diapo 12: Louise
+diapo 13-14: Marc-Vincent
+diapo 15: Vivien
+diapo 16: Alexia
+diapo 17-18: Celia
+
