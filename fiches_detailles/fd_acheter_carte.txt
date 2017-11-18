@@ -1,58 +1,60 @@
-UC02 : AcheterCarte
+AcheterCarte
 ----------------------------------------------
-Acteur : Acheteur
+Acteur : Joueur
 
-Descriptions : Le joueur achète une carte avec des joyaux et le système l'ajoute à ses cartes.
+Descriptions : Le joueur achète une carte avec des joyaux.
 
 
 Pré-conditions :
-- L'acheteur est connecté
- 
-
-Post-condition:
-- L'acheteur a plus de cartes
-- L'acheteur a moins de joyaux
-
+- Le joueur est connecté
 
 Scénario Nominal:
-SN1. L'acheteur choisit "acheter".
+SN1. Le joueur clique sur "acheter".
 SN2. Le système affiche les cartes disponible à l'achat en fonction de leur niveau de rareté.
-SN3. L'acheteur choisit une carte.
+SN3. Le joueur choisit une carte.
 SN4. Le système affiche la description de la carte (nom, rareté, valeurAttaque valeurDefense, description de ses effets) ainsi que son prix en joyaux.
-SN5. L'acheteur appuie sur "acheter".
+SN5. Le joueur appuie sur "acheter".
 SN6. Le système demande confirmation de l'achat.
-SN7. L'acheteur confirme son achat.
-SN8. Le système vérifie que le solde de joyaux de l'acheteur est suffisant :
+SN7. Le joueur confirme son achat.
+SN8. Le système vérifie que le solde de joyaux du joueur est suffisant :
 	- >= 20 joyaux pour une carte commune.
 	- >= 50 joyaux pour une carte rare.
 	- >= 200 joyaux pour une carte légendaire.
-SN9. Le système retire les joyaux du compte de l'acheteur.
-SN10. Le système ajoute la carte achetée au compte de l'acheteur.
+SN9. Le système retire les joyaux du compte du joueur.
+SN10. Le système ajoute la carte achetée à la collection du joueur.
 SN11. Le système affiche "Voulez-vous une autre carte ?"
-SN12. L'acheteur refuse.
+SN12. Le joueur refuse.
 
+Post-condition:
+- Le joueur a une carte en plus dans sa collection
+- Le joueur a moins de joyaux
 
 Alternatives :
- A1 : L'acheteur infirme son achat.
- 			En SN7, l'acheteur refuse d'acheter la carte affichée.
- 			A1.1) Le système affiche "Annulation de l'achat"
- 			A1.2) Le système retourne en SN2
+ A1 : Le joueur infirme son achat.
+ 	En SN7, le joueur refuse d'acheter la carte affichée.
+ 	A1.1) Le joueur appuie sur "annuler"
+	A1.2) Le système affiche "Annulation de l'achat"
+ 	A1.3) Le système retourne en SN2
  			
- A2 : L'acheteur n'achète pas
- 			En SN5, l'acheteur n'appuie pas sur "achat"
- 			A2.1) Le sytème retourne en SN2
+ A2 : Le joueur n'achète pas
+ 	En SN5, le joueur n'appuie pas sur "achat"
+ 	A2.1) Le joueur clique sur "retour"
+	A2.2) Le sytème retourne en SN2
  				
- A3 : L'acheteur n'a pas assez de joyeux pour acheter sa carte
- 			En SN8, le solde de joyaux de l'acheteur est insuffisant
- 			A3.1) Le système affiche "Solde insuffisant".
- 			A3.2) Le système retourne en SN4
+ A3 : Le joueur n'a pas assez de joyeux pour acheter la carte sélectionnée
+ 	En SN8, le solde de joyaux du joueur est insuffisant
+ 	A3.1) Le système affiche "Solde insuffisant".
+ 	A3.2) Le système retourne en SN2
 
- A4 : L'acheteur veut acheter une autre carte
- 			En SN12, l'acheteur veut une autre carte.
- 			A4.1) Le système retourne en SN2 
+ A4 : Le joueur veut acheter une autre carte
+ 	En SN12, le joueur veut une autre carte.
+ 	A4.1) Le joueur clique sur "accepter"
+	A4.2) Le système retourne en SN2 
 
 
 Exceptions :
- E1 : L'acheteur annule son achat.
- 			En SN3, l'acheteur appuie sur retour ou annuler
- 			E1.1) Le système retourne au menu principal
+ E1 : Le joueur veut retourner au menu principal
+ 	En SN3, le joueur ne veut pas acheter de carte
+ 	E1.1) Le joueur clique sur "menu principal"
+	E1.2) Le système retourne au menu principal
+	E1.3) Fin interaction
