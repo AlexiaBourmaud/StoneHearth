@@ -32,7 +32,7 @@ A4. En SN9, le joueur souhaite continuer de modifier son deck, retour en SN5.
 
 Exceptions:
 
-E1. L'utilisateur appuie sur "quitter" en SN3, SN5 ou en SN9 fin de l'interaction.
+E1. L'utilisateur appuie sur "quitter" en SN3 ou en SN5, fin de l'interaction.
 
 
 
