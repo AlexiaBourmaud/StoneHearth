@@ -5,8 +5,8 @@ Description:L'utilisateur souhaite composer un deck avec les cartes de sa collec
 Pre-condition: L'utilisateur est connecté.
 	       
 SN:
-1.L'utilisateur clique sur "Composer un deck"
-2.Le système affiche "Selectionner le deck que vous souhaitez composer", et affiche les deck de l'utilisateur.
+1.L'utilisateur clique sur "Modifier deck"
+2.Le système affiche "Selectionner le deck que vous souhaitez modifier", et affiche tous les decks de l'utilisateur, qu'ils soient vierges, à moitié remplis ou complets.
 3.L'utilisateur selectionne un deck en appuyant dessu.
 4.Le système affiche les cartes présentent dans le deck  à gauche de l'écran et les cartes présentent dans la collection à droite de l'écran (par ordre de puissance).
 5.L'utilisateur selectionne une carte dans la collection.
