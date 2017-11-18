@@ -1,14 +1,14 @@
 Titre: ComposerDeck
-Auteur:Joueur connecté
+Acteur:Joueur connecté
 Description:L'utilisateur souhaite composer un deck avec les cartes de sa collection.
 
 Pre-condition: L'utilisateur est connecté.
 	       
 SN:
 1.L'utilisateur clique sur "Composer un deck"
-2.Le système affiche "Selectionner le deck que vous souhaitez composer"
-3.L'utilisateur selectionne un deck.
-4.Le système affiche les cartes présentent dans le deck et les cartes présentent dans la collection séparemment.
+2.Le système affiche "Selectionner le deck que vous souhaitez composer", et affiche les deck de l'utilisateur.
+3.L'utilisateur selectionne un deck en appuyant dessu.
+4.Le système affiche les cartes présentent dans le deck  à gauche de l'écran et les cartes présentent dans la collection à droite de l'écran (par ordre de puissance).
 5.L'utilisateur selectionne une carte dans la collection.
 6.Le système verifie qu'il reste un emplacement libre dans le desk.
 7.Le système ajoute la carte séléctionnée dans le deck selectionné.
@@ -16,17 +16,22 @@ SN:
 9.L'utilisateur quittte l'interaction.
 
 
-Post-condition: Le deck est modifié.
+Post-condition: Le deck est modifié, une carte a été ajoutée.
 
 Alternatives: 
 
-A1.En SN5, l'utilisateur selectionne une carte dans le desk.
+A1. En SN5, l'utilisateur selectionne une carte dans le desk.
 	A1.1 Le système supprime la carte selectionnée du deck.
-A2.L'utilisateur souhaite continuer de modifier ses decks en SN8, retour en SN1.
-A3.En SN6, si il n'y a pas d'emplacement libre, le système affiche votre desk est plein, retourn en SN4.
+A2. En SN6, s'il n'y a pas d'emplacement libre, le système affiche votre desk est plein, retourn en SN4.
+A3. En SN4, toutes les cartes ne sont pas affichées car il y en a trop, l'utilisateur peut en SN5 les faire défiler en appuyant sur les flèches en haut et en bas de l'écran. 
+	A3.1 En SN5 l'utilisateur appuie sur une des flèche.
+	A3.2 Le système affiche les cartes suivantes/précédentes du deck/de la collection.
+	A3.3 Retour en SN5.
+A4. En SN9, le joueur souhaite continuer de modifier son deck, retour en SN5.
 
 Exceptions:
-E1.L'utilisateur annule l'interaction en SN3, SN5 et en SN8 fin de l'interaction.
+
+E1. L'utilisateur appuie sur "quitter" en SN3, SN5 ou en SN9 fin de l'interaction.
 
 
 
