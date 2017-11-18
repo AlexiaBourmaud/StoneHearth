@@ -2,7 +2,7 @@ Titre: ComposerDeck
 Acteur:Joueur connecté
 Description:L'utilisateur souhaite composer un deck avec les cartes de sa collection.
 
-Pre-condition: L'utilisateur est sur l'écran d'acceuil.
+Pre-condition: L'utilisateur est sur l'écran d'accueil.
 	       
 SN:
 1.L'utilisateur clique sur "Modifier deck"
