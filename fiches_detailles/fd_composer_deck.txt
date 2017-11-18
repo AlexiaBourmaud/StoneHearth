@@ -22,6 +22,7 @@ Alternatives:
 
 A1. En SN5, l'utilisateur selectionne une carte dans le desk.
 	A1.1 Le système supprime la carte selectionnée du deck.
+	A1.2 Retour en SN2.
 A2. En SN6, s'il n'y a pas d'emplacement libre, le système affiche votre desk est plein, retourn en SN4.
 A3. En SN4, toutes les cartes ne sont pas affichées car il y en a trop, l'utilisateur peut en SN5 les faire défiler en appuyant sur les flèches en haut et en bas de l'écran. 
 	A3.1 En SN5 l'utilisateur appuie sur une des flèche.
