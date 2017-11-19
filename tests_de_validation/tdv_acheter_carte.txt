@@ -1,105 +1,101 @@
 TV01 : acheterCarte nominal
-Contexte : le joueur est connecté, 
-					 il possède au moins 20 joyaux,
-					 "C1" est une carte commune
-					
-Entrée :		carte="C1"
+Contexte : le joueur est connecté, il possède au moins 20 joyaux, "goblin" est une carte commune
+Entrée : nomCarte="goblin"
+Scénario :
+	1. Le joueur clique sur "acheter une carte"
+	2. Le joueur clique sur la carte "gobelin"
+	3. Le joueur clique sur "acheter"
+	4. Le joueur confirme son achat
+	5. Le joueur refuse d'acheter une autre carte
+	6. Le joueur termine
+Résultat attendu : 
+	-affichage "Vous venez d'acquérir une nouvelle carte "goblin"
+	-le joueur possède maintenant la carte "goblin"
+	-le solde du joueur est décrémenté de 20 joyaux
+Moyen de vérification :
+	-le joueur va dans la rubrique "visualiser collection" et trouve sa carte nouvellement achetée
+	-le joueur vérifie son solde en haut à droite du menu "acheter une carte"
 
-Scénario :	1. Le joueur choisit "acheter une carte"
-						2. Le joueur sélectionne la carte "C1"
-						3. Le joueur achète la carte "C1"
-						4. Le joueur termine 
-						
-Résultat attendu :	-Afficher le message "Vous venez d'acquérir la carte 'C1' et votre solde a été débité de 20 joyaux"
-										-Le joueur possède la carte "C1"
-										-Le solde du joueur a été décrémenté de 20 joyaux
-										
-Moyen de validation : -vérification visuelle du message
-											-visualiser la collection du joueur
-											-visualiser le solde du joueur 
+TV02 : acheterCarte le joueur ne confirme pas son achat
+Contexte : le joueur est connecté, "goblin" est une carte commune
+Entrée nomCarte="goblin"
+Scénario :
+	1. Le joueur clique sur "acheter une carte"
+	2. Le joueur clique sur la carte "gobelin"
+	3. Le joueur clique sur "acheter"
+	4. Le joueur annule son achat
+	5. Le joueur termine
+Résultat attendu : 
+	-affichage "achat annulé"
+	-le joueur a le même nombre de carte qu'avant
+	-le joueur a le même solde qu'avant
+Moyen de vérification :
+	-le joueur va dans la rubrique "visualiser collection" et ne trouve pas la carte qu'il avait sélectionnée
+	-le joueur vérifie son solde en haut à droite du menu "acheter une carte", le solde n'a pas changé
 
+TV03 : acheterCarte retour après avoir vu la description de la carte
+Contexte : le joueur est connecté, "goblin" est une carte commune
+Entrée nomCarte="goblin"
+Scénario :
+	1. Le joueur clique sur "acheter une carte"
+	2. Le joueur clique sur la carte "gobelin"
+	3. Le joueur clique sur "retour"
+	4. Le joueur termine
+Résultat attendu : 
+	-le joueur a le même nombre de carte qu'avant
+	-le joueur a le même solde qu'avant
+Moyen de vérification :
+	-le joueur va dans la rubrique "visualiser collection" et ne trouve pas la carte qu'il avait sélectionnée
+	-le joueur vérifie son solde en haut à droite du menu "acheter une carte", le solde n'a pas changé
 
-
-TV02 : acheterCarte infirme son achat
-Contexte :	le joueur est connecté, 
-					  il possède au moins 20 joyaux,
-					  "C1" est une carte commune
-					  
-Entrée :		carte="C1"
-
-Scénario :	1. Le joueur choisit "acheter une carte"
-						2. Le joueur sélectionne la carte "C1"
-						3. Le joueur ne confirme pas l'achat
-						4. Le joueur termine 
-						
-Résultat attendu :	-Afficher le message "Vous n'avez pas valider votre choix de la carte 'C1', votre solde n'a pas été débité"
-										-Le joueur ne possède pas la carte "C1"
-										-Le solde du joueur n'a pas été décrémenté de 20 joyaux
-										
-Moyen de validation : -vérification visuelle du message
-											-visualiser la collection du joueur
-											-visualiser le solde du joueur 
-											
-TV03 : acheterCarte n'achète pas
-Contexte :	le joueur est connecté, 
-					  il possède au moins 20 joyaux,
-					  "C1" est une carte commune
-					  
-Entrée :		carte="C1"
-
-Scénario :	1. Le joueur choisit "acheter une carte"
-						2. Le joueur sélectionne la carte "C1"
-						3. Le joueur ne confirme pas l'achat
-						4. Le joueur termine 
-						
-Résultat attendu :	-Afficher le message "Vous n'avez pas valider votre choix de la carte 'C1', votre solde n'a pas été débité, retour à l'affichage des cartes"
-										-Le joueur ne possède pas la carte "C1"
-										-Le solde du joueur n'a pas été décrémenté de 20 joyaux
-										
-Moyen de validation : -vérification visuelle du message
-											-visualiser la collection du joueur
-											-visualiser le solde du joueur 
-				
-				
-										
 TV04 : acheterCarte pas assez de joyaux
-Contexte : le joueur est connecté, 
-					 le joueur possède moins de 20 joyaux,
-					 "C1" est une carte commune
-					
-Entrée :		carte="C1"
+Contexte : le joueur est connecté, il possède moins de 20 joyaux, "goblin" est une carte commune
+Entrée : nomCarte="goblin"
+Scénario :
+	1. Le joueur clique sur "acheter une carte"
+	2. Le joueur clique sur la carte "gobelin"
+	3. Le joueur clique sur "acheter"
+	4. Le joueur confirme son achat
+Résultat attendu : 
+	-affichage "Vous n'avez pas assez de joyaux pour acheter cette carte"
+	-le joueur ne possède pas la carte "goblin"
+	-le solde du joueur est inchangé
+Moyen de vérification :
+	-le joueur va dans la rubrique "visualiser collection" et ne trouve pas la carte
+	-le joueur vérifie son solde en haut à droite du menu "acheter une carte"
 
-Scénario :	1. Le joueur choisit "acheter une carte"
-						2. Le joueur sélectionne la carte "C1"
-						3. Le joueur achète la carte "C1"
-						4. Le joueur termine 
-						
-Résultat attendu :	-Afficher le message "Vous n'avez pas suffisament de joyaux pour acheter cette carte"
-										-Le joueur ne possède pas la carte "C1"
-										-Le solde du joueur n'a pas été décrémenté de 20 joyaux
-										
-Moyen de validation : -vérification visuelle du message
-											-visualiser la collection du joueur
-											-visualiser le solde du joueur 
-											
+TV05 : acheterCarte acheter 2 cartes
+Contexte : le joueur est connecté, il possède au moins 70 joyaux, "goblin" est une carte commune, "dieu de la foudre" est une carte rare
+Entrée : nomCarte="goblin", nomCarte="dieu de la foudre"
+Scénario :
+	1. Le joueur clique sur "acheter une carte"
+	2. Le joueur clique sur la carte "gobelin"
+	3. Le joueur clique sur "acheter"
+	4. Le joueur confirme son achat
+	5. Le joueur accepte d'acheter une autre carte
+	6. Le joueur clique sur "acheter une carte"
+	7. Le joueur clique sur la carte "dieu de la foudre"
+	8. Le joueur clique sur "acheter"
+	9. Le joueur confirme son achat
+	10. Le joueur termine
+Résultat attendu : 
+	-affichage "Vous venez d'acquérir une nouvelle carte "goblin" et "Vous venez d'acquérir une nouvelle carte "dieu de la foudre"
+	-le joueur possède maintenant la carte "goblin" et "dieu de la foudre"
+	-le solde du joueur est décrémenté de 70 joyaux
+Moyen de vérification :
+	-le joueur va dans la rubrique "visualiser collection" et trouve ses cartes nouvellement achetées
+	-le joueur vérifie son solde en haut à droite du menu "acheter une carte"
 
-
-TV05 : acheterCarte annulation de l'achat
-Contexte : le joueur est connecté, 
-					 le joueur possède moins de 20 joyaux,
-					 "C1" est une carte commune
-					
-Entrée :		carte="C1"
-
-Scénario :	1. Le joueur choisit "acheter une carte"
-						2. Le joueur sélectionne la carte "C1"
-						3. Le joueur annule son achat
-						4. Le joueur termine 
-						
-Résultat attendu :	-Afficher le message "Retour au menu principal"
-										-Le joueur ne possède pas la carte "C1"
-										-Le solde du joueur n'a pas été décrémenté de 20 joyaux
-										
-Moyen de validation : -vérification visuelle du message
-											-visualiser la collection du joueur
-											-visualiser le solde du joueur 
+TV06 : acheterCarte retourner au menu principal
+Contexte : le joueur est connecté
+Entrée : ------
+Scénario :
+	1. Le joueur clique sur "acheter une carte"
+	2. Le joueur clique sur menu principal
+	3. Le joueur termine
+Résultat attendu : 
+	-le joueur ne possède pas de nouvelle carte
+	-le solde du joueur est inchangé
+Moyen de vérification :
+	-le joueur va dans la rubrique "visualiser collection" et ne trouve pas de nouvelle carte
+	-le joueur vérifie son solde en haut à droite du menu "acheter une carte"
