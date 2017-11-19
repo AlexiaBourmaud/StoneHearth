@@ -9,7 +9,7 @@ Pré-conditions :
 - Le joueur est connecté
 
 Scénario Nominal:
-SN1. Le joueur clique sur "acheter".
+SN1. Le joueur clique sur "acheter une carte".
 SN2. Le système affiche les cartes disponible à l'achat en fonction de leur niveau de rareté.
 SN3. Le joueur choisit une carte.
 SN4. Le système affiche la description de la carte (nom, rareté, valeurAttaque valeurDefense, description de ses effets) ainsi que son prix en joyaux.
