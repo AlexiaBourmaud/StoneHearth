@@ -127,3 +127,48 @@ Résultats attendus:
 
 Moyens de validation:
 - Visuel : on observe d'autres cartes qui composent le deck "Deck1".
+
+
+#########################################################
+TV07: ComposerDeck Ajout de deux cartes
+Contexte: le joueur est connecter, il possède un deck "Deck1", et au moins les cartes basiques dans sa collection 
+
+Entrées: deck="Deck1" et carte="Chat noir" et carte= "Lion d'or"
+
+Scénario: 
+1) Le joueur selectionne "Modifier deck"
+2) Le joueur selectionne le deck "Deck1"
+3) Le joueur selectionne la carte "Chat noir" présente dans sa collection.
+4) Le joueur selectionnne la carte "Lion d'or" présente dans sa collection.
+4) Le joueur termine l'intéraction
+
+Résultats Attendus: 
+- Les cartes "Chat noir" et "Lion d'or" sont ajoutées au deck "Deck1"
+
+Moyens validation:
+- Visualisation du deck "Deck1" lors de la suite de l'intéraction
+- On peut réaliser le test TV08 qui supprimme les deux cartes "Chat noir" et "Lion d'or" pour vérifier qu'elles étaient bien présentent dans le deck "Deck1"
+
+##############################################################
+
+TV08: ComposerDeck Supression de deux cartes
+Contexte: Le joueur est connecté, il possède les cartes "Chat noir" et "Lion d'or" dans son deck "Deck1". Ce test peut être réaliser après le test TV07.
+
+Entrées: deck: "Deck1" ,carte: "Chat noir" et carte: "Lion d'or".
+
+Scénario:
+1) Le joueur choisit "Modifier deck".
+2) Le joueur selectionne le deck "Deck1".
+3) Le joueur selectionne le carte "Chat noir" présente dans son deck "Deck1".
+4) Le joueur selectionne le carte "Lion d'or" présente dans son deck "Deck1".
+5) Le joueur met fin à l'interaction.
+
+Résultats attendus:
+- Les carte "Chat noir" et "Lion d'or" n'appartiennent plus au deck "Deck1".
+
+Moyens de validation:
+- Afficher le deck "Deck1" lors de la suite de l'intéraction: la carte "Chat noir" doit avoir disparu.
+- Réaliser le test TV07 pour remettre les cartes "Chat noir" et "Lion d'or" dans le deck "Deck1". 
+
+
+
