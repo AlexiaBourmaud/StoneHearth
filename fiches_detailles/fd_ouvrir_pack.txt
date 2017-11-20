@@ -14,5 +14,7 @@ SN06: Le joueur clique sur "Continuer".
 Post-condition: Les 5 cartes ont été ajoutées à la collection du joueur, le compteur de packs du joueur a diminué de 1.
 
 Exceptions:
-E1.1 En SN02, le joueur a un nombre de packs nul.
-E1.2 Le système affiche "Impossible, vous n'avez pas de pack". Fin de l'interaction.
+E1 Nombre de packs insuffisant
+En SN02, le joueur a un nombre de packs nul.
+E1.1 Le système affiche "Impossible, vous n'avez pas de pack". 
+E1.2 Fin de l'interaction.
