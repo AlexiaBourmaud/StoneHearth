@@ -1,24 +1,25 @@
-Titre: SeConnecter
-Auteur: Joueur non connecté
-Description: Cas d'utilisation durant lequel l'utilisateur se connecte à son compte.
-Pre-condition:
+Titre: Se connecter 
 
-SN:
-1.L'utilisateur clique sur "Se connecter"
-2.Le système affiche "saisir votre identifiant et votre mot de passe"
-3.L'utilisateur saisi son identifiant et son mot de passe.
-4.Le système vérifie que l'identifiant et le mot de passe correspondent à un compte utilisateur.
-5.Le système affiche "connection établie"
+Description: Un joueur non connecté souhaite se connecter à son compte.
 
-Post-conditions: L'utilisateur est maintenant connecté à son compte. 
+Acteur: Joueur.
 
-Alternatives:
-A1. Erreur d'identification ou de mot de passe: En SN4, si l'identifiant et le mot de passe ne correspondent pas à un compte < 3 essaies : A1.1 retour en SN2. 
-					    A1.2 Sinon le système affiche "Avez vous dejà crée un compte ?" retour au cas d'utilisation, creer un compte.
+Préconditions: Le joueur doit avoir un compte.
 
+Post conditions: Le joueur figure dans la liste des utilisateurs connectés.
 
-Exceptions:
-E1. L'utilisateur annule sa connection: en SN3 l'utilisateur clique sur "annuler la connection", fin de l'interaction.
+Scénario nominal:
+1.Le joueur choisit "Se connecter".
+2.Le système demande son identifiant et son mot de passe.
+3.Le joueur saisit son identifiant et son mot de passe.
+4.Le système vérifie que les données saisies correspondent a un compte utilisateur.
+5.Le système affiche la page d'accueil principale.
 
+Alternative:
+A1.Echec authentification:
+En SN4, si l'identifiant ou le mot de passe ne correspondent pas, le système invite le joueur a réessayer.
+	A1.1 Si nombre d'essais < 3, retour en SN2.
+	A1.2 Sinon le système invite le joueur a créer a compte, retour au cas d'utilisation "Créer un compte".
 
-
+Exception:
+E1. Le joueur peut annuler sa connexion en SN3, retour à l'écran d'accueil "connexion/inscription". 
