@@ -1,0 +1,22 @@
+TV01: Ouvrir Pack
+Contexte: Le joueur est connecté et a 1 pack ou plus non ouverts. Le joueur est sur la page d'accueil.
+Entrées: Aucune
+Scénario :
+1. Le joueur choisit "Ouvrir Pack".
+2. Le joueur clique sur "Continuer".
+
+
+RA: Le système affiche la page d'accueil. Le nombre de packs du joueur a diminué de 1. Le joueur a 5 cartes de plus dans sa collection, dont au moins une rare.
+
+MV: Affichages visuels
+
+TV02: Ouvrir Pack sans Pack
+
+Contexte: Le joueur est connecté et n'a aucun pack non ouverts. Le joueur est sur la page d'accueil.
+Entrées: Aucune
+Scénario :
+1. Le joueur choisit "Ouvrir Pack".
+
+RA: Le système affiche "Impossible, vous n'avez pas de pack". Le nombre de packs du joueur est 0. La collection du joueur n'a pas changé.
+
+MV: Affichages visuels
