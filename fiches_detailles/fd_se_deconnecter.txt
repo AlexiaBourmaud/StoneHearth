@@ -1,12 +1,18 @@
-Titre: Se deconnecter
-Acteur: Joueur
-Description: 
+Titre: Se déconnecter 
 
-Pré-requis: Authentification effectuée
+Description : Un joueur connecté souhaite se déconnecter de son compte.
 
+Acteur: Joueur.
 
-SN: 
-    SN1:   Le Joueur clique sur le bouton "se déconnecter"
-    SN2:   Le système  deconnecte le joueur
-    SN3:   Le système affiche la page de connexion
-    
+Préconditions: Le joueur est connecté à son compte.
+
+Post conditions: Le joueur ne figure plus dans la liste des utilisateurs connectés.
+
+Scénario nominal:
+1.Le joueur choisit "Se déconnecter".
+2.Le système déconnecte le joueur du système. 
+3.Le système affiche la page de connexion/inscription.
+
+Alternative: --
+
+Exception: --
