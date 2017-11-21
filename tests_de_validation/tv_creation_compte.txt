@@ -1,0 +1,84 @@
+ID : TV01
+
+Titre : Creation de compte
+
+Contexte :
+
+Entrée :
+	- pseudo -> "toto"
+	- mot de passe -> "123123"
+
+Scénario :
+	1- L'Utilisateur non connecté appuie sur "Créer compte"
+	2- L'Utilisateur non connecté rentre son pseudo "toto"
+	3- L'Utilisateur non connecté rentre son mot de passe "12334"
+	4- L'Utilisateur non connecté appuie sur "Valider"
+
+RA :
+    - Le Systeme affiche une confirmation
+	- Les renseignements fournis sont enregistrés
+	- L'Utilisateur peut se loguer
+	- Le pseudo n'est plus disponible
+
+MV :
+	- Confirmation visuelle
+	- Essayer de créer un compte et voir que "toto" est non disponible
+	- Se loguer avec le pseudo "toto" et le mot de passe "123123"
+	- Voir dans la base de donnée si les information ont bien été enregistrées
+
+
+------------------------------------------------------------------------------
+
+
+ID : TV02
+
+Titre : Creation de compte (Avec CB)
+
+Contexte :
+
+Entrée :
+	- pseudo -> "toto"
+	- mot de passe -> "123123"
+	- coordonnées bancaire -> "XXXX XXXX XXXX XXXX"
+
+Scénario :
+	1- L'Utilisateur non connecté appuie sur "Créer compte"
+	2- L'Utilisateur non connecté rentre son pseudo "toto"
+	3- L'Utilisateur non connecté rentre son mot de passe "123123"
+	4- L'Utilisateur non connecté rentre ses coordonnées bancaires  "XXXX XXXX XXXX XXXX"
+	5- L'Utilisateur non connecté apuuie sur "Valider"
+
+RA :
+	- Le Systeme affiche une confirmation
+	- Les renseignements fournis sont enregistrés
+	- L'Utilisateur peut se loguer
+	- Le pseudo n'est plus disponible
+
+MV :
+	- Confirmation visuelle
+	- Essayer de créer un compte et voir que "toto" est non disponible
+	- Se loguer avec le pseudo "toto" et le mot de passe "123123"
+	- Voir dans la base de donnée si les information ont bien été enregistrées
+
+
+------------------------------------------------------------------------------
+
+
+
+ID : TV03
+
+Titre : Creation de compte (Annulation)
+
+Contexte :
+
+Entrée :
+
+Scénario :
+	1- L'Utilisateur non connecté appuie sur "Créer compte"
+	2- L'Utilisateur non connecté appuie sur "Annuler"
+
+RA :
+    - On se retouve sur la page de connexion
+
+MV :
+	- Voir si l'on se trouve sur la page de connexion après annulation

@@ -1,0 +1,70 @@
+ID : TV01
+
+Titre : Renseigner ses coordonnées bancaire après la creation du compte
+
+Contexte : Le Joueur est connecté et n'a pas déjà renseigné ses coordonnées bancaires
+
+Entrée :
+	- Coordonnées bancaire -> "XXXX XXXX XXXX XXXX"
+
+Scénario :
+	1- Le Joueur appuie sur "Renseigner ses coordonnées bancaires"
+	2- Le Joueur rentre ses coordonnées bancaires "XXXX XXXX XXXX XXXX"
+	3- Le Joueur appuie sur "Valider"
+
+RA :
+	- Confimation visuelle
+	- Les coordoonées bancaires ont bien été enregistrées
+
+MV :
+    - Confimation visuelle
+	- Voir si les coordonnées bancaires se trouve dans la base de donnée
+
+
+------------------------------------------------------------------------------
+
+
+ID : TV02
+
+Titre : Renseigner ses coordonnées bancaire après la creation du compte
+
+Contexte : Le Joueur est connecté et a pas déjà renseigné ses coordonnées bancaires
+
+Entrée :
+	- Coordonnées bancaire -> "XXXX XXXX XXXX XXXX"
+
+Scénario :
+	1- Le Joueur appuie sur "Renseigner ses coordonnées bancaires"
+	2- Le Joueur appuie sur "Oui"
+	3- Le Joueur rentre ses autres coordonnées bancaires "XXXX XXXX XXXX XXXX"
+	4- Le Joueur appuie sur "Valider"
+
+RA :
+	- Confimation visuelle
+	- Les coordoonées bancaires ont bien été enregistrées
+
+MV :
+    - Confimation visuelle
+	- Voir si les coordonnées bancaires se trouvent dans la base de donnée
+
+
+------------------------------------------------------------------------------
+
+
+ID : TV03
+
+Titre : Annuler le Renseignement de ses coordonnées bancaire après la creation du compte E1
+
+Contexte : Le joueur est connecté et n'a pas déjà renseigné ses coordonnées bancaires
+
+Entrée :
+
+Scénario :
+	1- Le Joueur appuie sur "Renseigner ses coordonnées bancaires"
+	2- Le Joueur appuie sur "Annuler"
+
+RA :
+	- On se retouve sur la page d'accueil
+
+MV :
+    - Voir si l'on se trouve sur la page d'accueil après annulation
