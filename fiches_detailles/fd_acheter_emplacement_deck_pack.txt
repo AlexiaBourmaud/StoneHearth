@@ -1,0 +1,65 @@
+UC03 : AcheterRemplacementDeck_Pack
+-------------------------------------------------------------------------------
+
+Date de création : 10/10/2017
+Date de Mise à jour : 21/11/2017
+Responsable : Bizzozzéro Nicolas
+Version : 1.0
+
+Description : Le joueur achète un emplacement pour son deck ou un pack de cartes.
+
+Acteur : Acheteur
+
+Pré-conditions :
+- L'acheteur est connecté.
+- L'acheteur a assez d'argent sur son compte bancaire pour effectuer l'achat.
+- L'acheteur a bien renseigné ses coordonnées bancaires.
+
+Post-condition:
+- L'acheteur a été débité du bon montant sur son compte bancaire.
+- Le compteur de packs de l'acheteur a été augmenté.
+
+
+Scénario Nominal:
+    SN01) L'acheteur appuie sur "Boutique".
+    SN02) Le système affiche une option pour acheter un pack ainsi que une option pour agrandir ses emplacements de decks.
+    SN03) L'acheteur choisit d'acheter un pack.
+    SN04) Le système affiche des informations sur l'achat (contient 5 cartes tirées aléatoirement dont une rare) ainsi que son prix (1,39€ ou 1.99$) et un bouton "acheter".
+    SN05) L'acheteur appuie sur "acheter".
+    SN06) Le système demande confirmation de l'achat.
+    SN07) L'acheteur confirme son achat.
+    SN08) Le système prélève le montant depuis le compte bancaire de l'utilisateur.
+    SN09) Le système incrémente le compteur de packs de l'utilisateur.
+    SN10) Le système affiche "Félicitation vous avez bien reçu votre achat.".
+    SN11) Le système affiche "Voulez-vous effectuer un nouvel achat ?".
+    SN12) L'acheteur refuse.
+
+
+Alternatives :
+    A1 : L'acheteur veut plutôt acheter un emplacement de deck.
+        En SN03, l'acheteur choisit un emplacement de deck.
+        A1.1) Le système affiche le prix de l'emplacement (2€ ou 3$ chacun).
+        A1.2) Le système retourne en SN05.
+    A2 : L'acheteur refuse l'achat.
+        En SN05, l'acheteur appuie sur retour.
+        A2.1) Le sytème retourne en SN02.
+    A3 : L'acheteur refuse la confirmation de l'achat.
+		En SN07, l'acheteur refuse la confirmation de l'achat.
+		A3.1) Le système affiche "Annulation de l'achat".
+		A3.2) Le système retourne en SN02.
+    A4 : L'acheteur n'a pas assez d'argent sur son compte.
+        En SN08, la banque de l'utilisateur refuse le prélèvement.
+        A4.1) Le système affiche "Achat impossible, annulation.".
+        A4.2) Le système retourne en SN02.
+    A5 : L'acheteur veut effectuer un autre achat.
+		En SN12, l'acheteur choisit d'effectuer un nouvel achat.
+		A5.1) Le système retourne en SN02.
+ 			
+Exceptions :
+    E1 : L'acheteur annule son achat.
+		En SN03, l'acheteur appuie sur retour.
+		E1.1) Le système retourne au menu principal.
+    E2: L'acheteur n'a pas renseigné ses coordonnées bancaires.
+        EN SN08, le système n'a aucune coordonnées bancaires.
+        E2.1) Le système affiche "Pas de coordonnées bancaires renseignées, veuillez les ajouter avant d'effectuer un achat.".
+        E2.2) Le système retourne au menu principal.
