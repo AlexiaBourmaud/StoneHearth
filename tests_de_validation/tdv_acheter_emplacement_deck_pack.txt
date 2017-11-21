@@ -1,0 +1,161 @@
+ID : TV01
+
+Titre : Acheter un pack
+
+Contexte : Samir est connecté et se trouve dans la boutique, il a correctement renseigné ses coordonnées bancaires et a un solde bancaire suffisant pour faire son achat.
+
+Entrée :
+
+Scénario :
+    1: Le joueur appuie sur le bouton "Pack"
+    2. Le joueur appuie sur "Acheter"
+    3. Le joueur confirme son achat
+    4. Le joueur refuse un second achat
+
+RA :
+    -> Le joueur a bien été débité de la bonne somme (1.99$ ou 1.39€).
+    -> Le joueur a bien vu son compteur de packs incrémenté.
+    -> Le système affiche "Félicitation vous avez bien reçu votre achat."
+
+MV :
+    -> Vérifier sur son compte en banque qu'il a bien été débité de la bonne somme.
+    -> Vérifier que le compteur de packs du joueur a bien été incrémenté.
+    -> Affichage visuel
+
+
+-------------------------------------------------------------------------------
+
+
+ID : TV02
+
+Titre : Acheter un emplacement de deck
+
+Contexte : Marie est connectée et se trouve dans la boutique, elle a correctement renseigné ses coordonnées bancaires et a un solde bancaire suffisant pour faire son achat.
+
+Entrée :
+
+Scénario :
+    1: Le joueur appuie sur le bouton "Emplacement deck"
+    2. Le joueur confirme son achat
+    3. Le joueur refuse un second achat
+
+RA :
+    -> Le joueur a bien été débité de la bonne somme (1.99$ ou 1.39€).
+    -> Le joueur a bien un emplacement de deck supplémentaire.
+    -> Le système affiche "Félicitation vous avez bien reçu votre achat."
+
+MV :
+    -> Vérifier sur son compte en banque qu'il a bien été débité de la bonne somme.
+    -> Vérifier que un emplacement de deck a été ajouté
+    -> Affichage visuel
+    
+    
+-------------------------------------------------------------------------------
+
+
+ID : TV03
+
+Titre : Acheter un pack sans avoir assez d'argent
+
+Contexte : Sophie est connectée et se trouve dans la boutique, elle a correctement renseigné ses coordonnées bancaires et n'a pas un solde suffisant pour effectuer son achat.
+
+Entrée :
+
+Scénario :
+    1: Le joueur appuie sur le bouton "Pack"
+    2. Le joueur appuie sur "Acheter"
+    3. Le joueur confirme son achat
+    4. Le système termine
+
+RA :
+    -> Le joueur n'a pas été débité.
+    -> Le compteur de pack du joueur n'a pas été incrémenté.
+    -> Le système affiche "Achat impossible, annulation.".
+
+MV :
+    -> Vérifier sur son compte en banque que la somme est inchangée
+    -> Vérifier que le joueur n'a rien reçu
+    -> Affichage visuel
+
+
+-------------------------------------------------------------------------------
+
+
+ID : TV04
+
+Titre : Acheter un emplacement de deck sans avoir assez d'argent
+
+Contexte : Julien est connecté et se trouve dans la boutique, il a correctement renseigné ses coordonnées bancaires et n'a pas un solde suffisant pour effectuer son achat.
+
+Entrée :
+
+Scénario :
+    1: Le joueur appuie sur le bouton "Emplacement deck".
+    2. Le joueur confirme son achat.
+    3. Le système termine.
+
+RA :
+    -> Le joueur n'a pas été débité.
+    -> Le joueur n'a pas d'emplacement deck supplémentaire.
+    -> Le système affiche "Achat impossible, annulation.".
+
+MV :
+    -> Vérifier sur son compte en banque que la somme est inchangée
+    -> Vérifier que le joueur n'a rien reçu
+    -> Affichage visuel
+
+
+-------------------------------------------------------------------------------
+
+
+ID : TV05
+
+Titre : Acheter un pack sans avoir rempli ses coordonnées bancaires
+
+Contexte : Jerôme est connecté et se trouve dans la boutique, il n'a pas renseigné ses coordonnées bancaires et a un solde suffisant pour effectuer son achat.
+
+Entrée :
+
+Scénario :
+    1. Le joueur appuie sur le bouton "Pack"
+    2. Le joueur appuie sur "Acheter"
+    3. Le joueur confirme son achat
+    4. Le système termine.
+
+RA :
+    -> Le joueur n'a pas été débité.
+    -> Le compteur de pack du joueur n'a pas été incrémenté.
+    -> Le système affiche "Pas de coordonnées bancaires renseignées, veuillez les ajouter avant d'effectuer un achat.".
+
+MV :
+    -> Vérifier sur son compte en banque que la somme est inchangée
+    -> Vérifier que le joueur n'a rien reçu
+    -> Affichage visuel
+
+
+-------------------------------------------------------------------------------
+
+
+ID : TV06
+
+Titre : Acheter un emplacement de deck sans avoir rempli ses coordonnées bancaires
+
+Contexte : Veronica est connectée et se trouve dans la boutique, elle n'a pas renseigné ses coordonnées bancaires et a un solde suffisant pour effectuer son achat.
+
+Entrée :
+
+Scénario :
+    1. Le joueur appuie sur le bouton "Emplacement deck"
+    2. Le joueur appuie sur "Acheter"
+    3. Le joueur confirme son achat
+    4. Le système termine.
+
+RA :
+    -> Le joueur n'a pas été débité.
+    -> Le joueur n'a pas d'emplacement deck supplémentaire.
+    -> Le système affiche "Pas de coordonnées bancaires renseignées, veuillez les ajouter avant d'effectuer un achat.".
+
+MV :
+    -> Vérifier sur son compte en banque que la somme est inchangée
+    -> Vérifier que le joueur n'a rien reçu
+    -> Affichage visuel
