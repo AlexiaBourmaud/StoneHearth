@@ -1,48 +1,43 @@
-Titre: Inscription à StoneHearth
-Acteur: Visiteur
-Description:
+UC01 : Créer compte
+------------------------------------------------------------------------------
 
-Pré-requis:
+Date de création : 10/10/2017
+Date de Mise à jour : 21/11/2017
+Responsable : Adoum Robert
+Version : 1.0
 
+Description : Le joueur achète un emplacement pour son deck ou un pack de cartes.
 
-SN: 
-    SN1:   Le systeme affiche un bouton inscription sur la page d'accueil 
-    SN2:   Le visiteur clique sur le bouton d'inscription
-    SN3:   Le systeme affiche une page de formulaire de saisie avec 
-             -pseudo
-             -mdp
-    SN4:   Le visiteur remplit les champs pseudo et mdp
-    SN5:   Le systeme verifie si le pseudo est disponible
-    SN6:   Le systeme verifie si le mdp est assez sécurisé(il contient plus de 8 caractères)
-    SN7:   Le systeme enregistre ces données et authentifie le visiteur
-    SN8:   Le systeme affiche "Continuer" ou "remplir coordonnées bancaires"
-    SN9:   Le systeme informe que le compte a bien été créee 
-    
-    
-ALT: 
-    A1:  Verification pseudo
-         En SN5 si le pseudo est non disponible alors afficher "Ton pseudo est déjà pris"
-         Retour en SN4
-    A2:  Verification mdp
-         En SN5 si le mdp est incorrect alors afficher "Ton mdp n'est pas sécurisé"
-         Retour en SN4 
-    A3:  Sans coordonnées bancaires
-         En SN8 si le visiteur clique sur le bouton continue et que les champs sont vides
-         Aller en SN12
-    A4:  Ajout coordonnées bancaires
-         En SN8 si le visiteur décide de remplir ces coordonnées bancaires. Effectuer use case 
-         Ajouter coordonnées bancaires
-    
-    
- 
-    
+Acteur : Utilisateur non connecté
+
+Pré-conditions :
+
+Post-condition:
+- Le joueur possède un compte et peut se loguer 
 
 
-    
+Séquencement nomimal:
+	SN01: L'Utilisateur non connecté appuie sur "Créer compte"
+	SN02: Le Systeme lui affiche le formulaire de saisie pour la création d'un compte
+	SN03: L'Utilisateur non connecté remplie le formulaire en rentrant son pseudo et son mot de passe
+	SN04: L'Utilisateur non connecté appuie sur le "Valider"
+	SN05: Le Systeme verifie si le pseudo est disponible/valide(pas d'espace) 
+	SN06: Le Systeme enregistre toute les données données entrées
+	SN07: Le Systeme affiche le message suivant : "Bienvenue sur StoneHearth."
+	SN08: Le Systeme renvoie vers la page de connexion
 
+Enchaînement alternatives:
+	A1: L'Utilisateur non connecté entre ses coordonnées bancaires en plus
+		L'enchaînement démarre après le point 3 de la séquence nominal
+		A1.1-L'Utilisateur non connecté remplie le champ coordonnées bancaires
+		Retour en SN04
 
-            
-    
+	A2: Le pseudo est non disponible/valide
+		L'enchaînement démarre après le point 5 de la séquence nominal
+		A2.1: Le Systeme affiche "Pseudo non disponible/valide, veuillez en rentrer un nouveau."
+		Retour en SN03
 
-    
-
+Enchaînement d'exceptions:
+	E1: L'Utilisateur non connecté appuie sur "Annuler"
+		L'enchaînement démarre après les points 2 ou 3 de la séquence nominal
+		E1.1: Le Systeme renvoie vers la page de connexion
