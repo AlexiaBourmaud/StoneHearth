@@ -26,20 +26,12 @@ Scénario Nomimal:
 	SN06: Le Systeme affiche le message suivant : "Félicitation vous pouvez acheter des packs."
 	SN07: Le Systeme renvoie vers la page d'achat de pack
 
-Alternatives:
-	A1: Le Joueur a déjà une/plusieurs carte(s) enregistrée(s) et enregistre une nouvelle
-		L'enchaînement démarre après le point 1 de la séquence nominal
-		A1.1 Le Systeme affiche "Vous avez déjà enregistré une CB voulez vous en rajouter une autre?"
-		A1.2 Le Joueur appuie sur "Oui"
-		Retour en SN02
-
 Exceptions:
 	E1: Le Joueur appuie sur "Annuler"
 		L'enchaînement démarre après les points 2 ou 3 de la séquence nominal
 		E1.1:  Le Systeme renvoie vers la page d'accueil
 
-	E2: Le Joueur a déjà une/plusieurs carte(s) enregistrée(s) et ne veut pas enregistrer une autre
+	E2: Le Joueur a déjà une CB enregistrée
 		L'enchaînement démarre après le point 1 de la séquence nominal
-		E2.1:  Le Systeme affiche "Vous avez déjà enregistré une CB voulez vous en rajouter une autre?"
-		E2.2:  Le Joueur appuie sur "Non"
-		E2.3:  Le Systeme renvoie vers la page d'accueil
+		E2.1:  Le Systeme affiche "Vous avez déjà enregistré une CB"
+		E2.2:  Le Systeme renvoie vers la page d'accueil
