@@ -1,4 +1,4 @@
-UC02 : Ajouter ses coordonnées bancaire après la création du compte
+UC02 : Ajoute/Modifier ses coordonnées bancaire après la création du compte
 ------------------------------------------------------------------------------
 
 Date de création : 10/10/2017
@@ -22,16 +22,11 @@ Scénario Nomimal:
 	SN02: Le Systeme lui affiche le formulaire de saisie pour renseigner ses coordonnées bancaires
 	SN03: Le Joueur rempli le formulaire 
 	SN04: Le Joueur appuie sur "Valider"
-	SN05: Le Systeme enregistre les coordonnées bancaires du Joueur
-	SN06: Le Systeme affiche le message suivant : "Félicitation vous pouvez acheter des packs."
+	SN05: Le Systeme enregistre les nouvelles coordonnées bancaires du Joueur
+	SN06: Le Systeme affiche le message suivant : "Félicitations vous pouvez acheter des packs."
 	SN07: Le Systeme renvoie vers la page d'achat de pack
 
 Exceptions:
 	E1: Le Joueur appuie sur "Annuler"
 		L'enchaînement démarre après les points 2 ou 3 de la séquence nominal
 		E1.1:  Le Systeme renvoie vers la page d'accueil
-
-	E2: Le Joueur a déjà une CB enregistrée
-		L'enchaînement démarre après le point 1 de la séquence nominal
-		E2.1:  Le Systeme affiche "Vous avez déjà enregistré une CB"
-		E2.2:  Le Systeme renvoie vers la page d'accueil
