@@ -1,29 +1,71 @@
 Titre: Jouer
+
 Acteur: Joueur
-Description: 
+	
 
-Pré-requis: Authentification effectuée
+Description: Permet au joueur de jouer une partie
+	
+Acteur:Joueur
+ 
+	
+
+Prérequis: Authentification effectuée
+	
+
+PostCondition:
+	
+
+SN:
+	
+
+    SN1:   Le Joueur choisit de jouer.
+	
+    SN2:   Le Système affiche la liste des decks du joueur.
+	
+    SN3:   Le Joueur choisit un des decks.
+	
+    SN4:   Le Système ajoute le joueur à la liste des joueurs cherchant une partie.
+	
+    SN5:   Le Système choisit aléatoirement un adversaire dans la liste des joueurs cherchant une partie possédant un rang similaire (écart<=3).
+	
+    SN6:   Le Système transmet les 2 decks et les identifiants des joueurs au moteur de jeu.
+	
+    SN7:   Le Système reçoit le résultat de la partie.
+	
+    SN8:   Le Système incrémente(si rang <100), respectivement décrémente(si rang>0) le rang du joueur s'il a gagné,respectivement perdu.
+
+    SN9:   Le Système enregistre le résultat de la partie, date dans l’historique des parties du joueur.
+
+    SN10:  Le Système vérifie dans l'historique de partie du joueur s'il peut lui donner un pack(1 pack toutes les 10 parties avec une limite de 2 toutes les 24 heures)
+     
+    SN11:  Le Système donne un pack au joueur (nb_pack+=1) .
+
+    SN12 : Le Système affiche "Vous avez reçu un pack".
+
+    SN13 : Affichage de l'ecran d'acceuil.
+	
+
+Alternative :
+
+A1 :
+	A1.1 : En SN8 le joueur a un rang=100 et a gagné donc on ne l’incrémente pas.
+	A1.2 : retour en SN9
+
+ 
+A2:
+	A2.1 : En SN8 le joueur a un rang=0 et a perdu donc on ne le décremente pas
+	A2.2 : retour en SN9
 
 
-SN: 
-    SN1:   Le Joueur choisit de jouer
-    SN2:   Le Système affiche une liste des decks du joueur
-    SN3:   Le Joueur choisit un des decks
-    SN4:   Le Système ajoute le joueur à la liste des joueurs cherchant une partie
-    SN5:   Le Système choisit aléatoirement un adversaire dans la liste des joueurs
-           cherchant une partie possèdant un rang similaire (écart<=3)
-    SN6:   Le Système transmet les 2 decks et les identifiants des joueurs au moteur de jeu
-    SN7:   Le Système détermine quel joueur a gagné
-    SN8:   Le Système incrémente, respectivement décrémente le rang du joueur s'il a gagné,
-           respectivement perdu 
-    SN9:   Le Système enregistre le résultat de la partie, la date.
-    SN10:  Le Système regarde l'historique de parties du joueur.
-    SN11:  Le Système donne un pack au joueur si les conditions sont respectées(2 pack maxi toute les 24h)
-    
-    
 ERREUR:
+	
+
     E1: Aucun deck n'a été mémorisé
-        En SN2 le Système affiche "Aucun deck mémorisé"
-    E2: Aucun Joueur n'a été trouvé
-        En SN5 le Système affiche le message "aucun joueur trouvé"    
-    
+        En SN2 le Système affiche "Aucun deck mémorisé", retour à l'écran d'acceuil
+	
+
+    E2:Le Joueur quitte la file d'attente en SN4
+        En SN4 le Système affiche le message "Annulation", retour à l'écran d'acceuil   
+	
+   E3: En SN11 les conditions ne sont pas respectées .
+	Retour sur l'écran d'acceuil
