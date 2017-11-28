@@ -1,17 +1,23 @@
-Titre: VisualiserCollection
-Auteur: Joueur connecté
-Description: L'utilisateur visualise les cartes qu'il possède dans sa collection.
-
-Pre-condition:L'utilisateur est connecté.
-
-SN:
-1.L'utilisateur clique sur "Voir ma collection de cartes".
-2.Le système affiche les cartes que possède l'utilisateur classées par ordre de rareté "basique" en premier, "commun" en deuxième, "rare" en troisième et "légendaire" à la fin.
-
-
-Post-conditions:
-- Les cartes de la collection du joueur doivent s'afficher.
-
-Alternatives:
-
-Exceptions:
+Fiche détaillée : Visualiser collection v2
+Titre : Visualiser collection
+Description : Le joueur souhaite visualiser sa collection de cartes.
+Acteurs : Joueur
+Préconditions : Le joueur est sur le menu principal
+Postconditions : Aucune
+Scénario nominal :
+  SN1 : Le joueur appuie sur le bouton "Collection".
+  SN2 : Le système recherche toutes les cartes appartenant au joueur
+    dans la base de données, et les affiche triées par puissance.
+  SN3 : Le joueur termine.
+Alternatives :
+  A1 : En SN3, le joueur appuie sur le bouton "Trier A-Z".
+    A1.1 : Le système effectue un tri lexical sur les cartes du joueur
+      et les affiche par ordre alphabétique.
+    A1.2 : On retourne en SN3.
+  A2 : En SN3, le joueur appuie sur le bouton "Trier P".
+     A2.1 : Le système effectue un tri numérique sur les cartes du joueur
+      et les affiche triées par puissance.
+    A2.2 : On retourne en SN3.
+  A3 : En SN3, le joueur appuie sur une carte.
+    A3.1 : Le système affiche la carte ainsi que sa description.
+    A3.2 : On retourne en SN3.
