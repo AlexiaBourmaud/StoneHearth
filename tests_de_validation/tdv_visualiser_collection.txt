@@ -1,4 +1,4 @@
- Tests de validation : Visualiser collection
+ Tests de validation : VisualiserCollection
 
 TV01 : Visualiser collection
 Contexte : Le joueur est sur le menu principal et souhaite visualiser sa collection.
