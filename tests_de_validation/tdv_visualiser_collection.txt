@@ -1,66 +1,54 @@
-TV01: Visualisation par ordre de rareté.
+ Tests de validation : Visualiser collection
 
-Contexte: "M" est connecté. Le système affiche la page d'accueil.
+TV01 : Visualiser collection
+Contexte : Le joueur est sur le menu principal et souhaite visualiser sa collection.
+Entrées : -
+Scénario :
+1. Le joueur appuie sur "Collection".
+2. Le joueur termine.
+Résultat attendu :
+- Affichage des cartes de sa collection triée par puissance
+Moyens de vérification :
+- Vérification visuelle
+- Le joueur vérifie que ses cartes sont bien triées par puissance
 
-Entrées: Aucune
+TV02 : Visualiser collection et trier les cartes par ordre alphabétique
+Contexte : Le joueur est sur le menu principal et souhaite visualiser sa collection
+triée par ordre alphabétique.
+Entrées : -
+Scénario :
+1. Le joueur appuie sur "Collection".
+2. Le joueur appuie sur "Tri A-Z".
+3. Le joueur termine.
+Résultat attendu :
+- Affichage des cartes de sa collection triée par ordre alphabétique
+Moyens de vérification :
+- Vérification visuelle
+- Le joueur vérifie que ses cartes sont bien triées par ordre alphabétique
 
-Scénario:
+TV03 : Visualiser collection et trier les cartes par puissance
+Contexte : Le joueur est sur le menu principal et souhaite visualiser sa collection
+triée par puissance.
+Entrées : -
+Scénario :
+1. Le joueur appuie sur "Collection".
+2. Le joueur appuie sur "Tri P".
+3. Le joueur termine.
+Résultat attendu :
+- Affichage des cartes de sa collection triée par puissance
+Moyens de vérification :
+- Vérification visuelle
+- Le joueur vérifie que ses cartes sont bien triées par puissance
 
-1. M clique sur "Voir ma collection de cartes".
-2. M sélectionne "affichage par ordre de rareté".
-
-RA:	-> Le système affiche les cartes que possède l'utilisateur classées par ordre de rareté "basique" en premier, "commun" en deuxième, "rare" en troisième et "légendaire" à la fin.
-
-MV:	-> Affichages visuels
-
-
-
-TV02: Visualisation par deck.
-
-Contexte: "M" est connecté. Le système affiche la page d'accueil.
-
-Entrées: Aucune
-
-Scénario:
-
-1. M clique sur "Voir ma collection de cartes".
-2. M sélectionne "affichage par deck".
-
-RA:	-> Le système affiche les cartes que possède l'utilisateur dans chacun de ses decks. Les cartes sont classées par rareté à l'intérieur des decks.
-
-MV:	-> Affichages visuels
-
-
-
-TV03: Visualisation des doublons.
-
-Contexte: "M" est connecté. Le système affiche la page d'accueil.
-
-Entrées: Aucune
-
-Scénario:
-
-1. M clique sur "Voir ma collection de cartes".
-2. M sélectionne "Affichage des doublons"
-
-RA: -> Le système affiche les cartes que l'utilisateur possède en plusieurs exemplaires, triées en fonction de leur rareté.
-
-MV: Affichages visuels
-
-
-
-TV04: Annulation
-
-Contexte: "M" est connecté. Le système affiche la page d'accueil.
-
-Entrées: Aucune
-
-Scénario:
-
-1. M clique sur "Voir ma collection de cartes".
-2. M sélectionne "Affichage par ordre de rareté".
-3. M annule la visualisation pour retourner à l'accueil.
-
-RA:	-> Le système affiche la page d'accueil.
-
-MV:	-> Affichages visuels
+TV04 : Visualiser collection et voir la description d'une carte
+Contexte : Le joueur est sur le menu principal et souhaite visualiser la description de la carte "Le mage des abysses"
+Entrées : position(200,216)
+Scénario :
+1. Le joueur appuie sur "Collection".
+2. Le joueur appuie sur l'écran aux coordonnées (200,216).
+2. Le joueur termine.
+Résultat attendu :
+- Affichage de la carte "Le mage des abysses" avec la description
+Moyens de vérification :
+- Vérification visuelle
+- Le joueur peut ajouter la carte "Le mage des abysses" à l'un de ses decks
