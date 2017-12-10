@@ -7,7 +7,18 @@ public class TestAppli {
 
     @Test
     public void testAcheterCarte() {
-
+        //ligne de vie
+		IPaiement ip = ComposantFactory.createCPaienment();
+		ICarte iCarte = ComposantFactory.createCCarte();
+		
+		String[] listeCarte = iCarte.listerCartes();
+		System.out.println(listeCarte);
+		String nomCarte = listeCarte[3];
+		String info = iCarte.infosCarte(nomCarte);
+		
+		IInfoJoueur iInfoJoueur = ComposantFactory.createCInfoJoueur(ip, iCarte);
+		iInfoJoueur.acheterCarte(nomCarte);
+		Integer prix = iCarte.getPrixAchat(nomCarte);
     }
 
 
