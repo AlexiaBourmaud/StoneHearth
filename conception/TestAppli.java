@@ -45,6 +45,34 @@ public class TestAppli {
 
     @Test
     public void testComposerDeck() {
+	//ligne de vie
+	IPaiement ip = ComposantFactory.createCPaienment();
+	ICarte iCarte = ComposantFactory.createCCarte();
+	IInfoJoueur iInfoJoueur = ComposantFactory.createCInfoJoueur(ip, iCarte);
+	IListeDeCartes coll = ComposantFactory.createCListeDeCarte();
+		
+	for (String d : iInfoJoueur.listerDeckJoueur("Bob")) {
+		System.out.println(c);
+	}
+	// le joueur choisit le deck D1
+	for (String c : coll.listerCartesListe("Bob", "D1")) {
+		System.out.println(c);
+	}
+		
+	String collection = iInfoJoueur.getCollection("Bob");
+	for (String c : coll.listerCartesListe("Bob", "collection")) {
+		System.out.println(c);
+	}
+		
+	//le joueur clique sur la carte chat
+	System.out.println(iCarte.infosCarte("chat"));
+
+	Boolean vide= coll.verificationDeckEmplacementVide("Bob","D1");
+	if (vide) {
+		for(String c : coll.ajouterCarteListe("Bob", "chat", "D1"){
+			System.out.println(c);
+		}
+	}
 
     }
 
