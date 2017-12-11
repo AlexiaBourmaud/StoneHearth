@@ -73,6 +73,7 @@ public class TestAppli {
 			System.out.println(c);
 		}
 	}
+	else System.out.println("Vous n'avez plus de place dans votre deck.");
 
     }
 
