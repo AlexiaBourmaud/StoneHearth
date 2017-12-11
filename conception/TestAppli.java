@@ -51,6 +51,35 @@ public class TestAppli {
 
     @Test
     public void testDetruireCarte() {
+	//ligne de vie
+	IPaiement ip = ComposantFactory.createCPaienment();
+	ICarte iCarte = ComposantFactory.createCCarte();
+	IInfoJoueur iInfoJoueur = ComposantFactory.createCInfoJoueur(ip, iCarte);
+	IListeDeCartes coll = ComposantFactory.createCListeDeCarte();
+		
+	String collection = iInfoJoueur.getCollection("Bob");
+		
+	for (String c : coll.listerCartesListe("toto", "coll")) {
+		System.out.println(c);
+	}
+	//le joueur clique sur la carte chat
+	System.out.println(iCarte.infosCarte("chat"));
+	int prix=iCarte.getPrixVente("chat");
+	if(prix==0){
+		System.out.println("Cette carte est basique elle ne peut pas être détruite.");
+	}
+	else System.out.println(prix);
+		
+	Set<String> retour = iInfoJoueur.destructionCarte("Bob","chat");
+	if (retour.contains("true")){
+		System.out.println("La destruction a été réalisée avec succès.");
+		Object[] res= retour.toArray();
+		System.out.println("Votre nouveau solde est de "+res[0]+" joyaux").
+	}
+	else System.out.println("La destruction n'a pas fonctionnée");
+	
+
+  }
 
     }
 
