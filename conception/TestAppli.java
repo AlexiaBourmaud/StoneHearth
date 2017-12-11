@@ -59,7 +59,7 @@ public class TestAppli {
 		
 	String collection = iInfoJoueur.getCollection("Bob");
 		
-	for (String c : coll.listerCartesListe("toto", "coll")) {
+	for (String c : coll.listerCartesListe("Bob", "collection")) {
 		System.out.println(c);
 	}
 	//le joueur clique sur la carte chat
