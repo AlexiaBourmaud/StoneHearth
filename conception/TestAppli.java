@@ -89,15 +89,14 @@ public class TestAppli {
 	String collection = iInfoJoueur.getCollection("Bob");
 		
 	for (String c : coll.listerCartesListe("Bob", "collection")) {
+		if( iCarte.getPrixVente(c) != 0 )
 		System.out.println(c);
 	}
 	//le joueur clique sur la carte chat
 	System.out.println(iCarte.infosCarte("chat"));
 	int prix=iCarte.getPrixVente("chat");
-	if(prix==0){
-		System.out.println("Cette carte est basique elle ne peut pas être détruite.");
-	}
-	else System.out.println(prix);
+	
+	System.out.println(prix);
 		
 	Set<String> retour = iInfoJoueur.destructionCarte("Bob","chat");
 	if (retour.contains("true")){
