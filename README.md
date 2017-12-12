@@ -11,3 +11,7 @@ pas trop trop de code
 On veut vraiment montrer que l'archi est realisable
 ne pas oublier de reexporter le code java vers UML
 
+## Attitude à avoir durant l'oral
+* Ne pas tourner le dos au prof
+* Parler à toute la salle
+* Pas les mains dans les poches
