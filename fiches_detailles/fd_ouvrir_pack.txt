@@ -7,7 +7,7 @@ Scénario Nominal:
 SN01: Le joueur clique sur "Ouvrir Pack"
 SN02: Le système vérifie que le compteur de packs du joueur n'est pas nul.
 SN03: Le système décremente le compteur de packs du joueur.
-SN04: Le système tire au sort les 5 cartes contenues dans le pack. Au moins l'une des cartes est "Rare". Les cartes sont directement ajoutés à la collection du joueur.
+SN04: Le système tire au sort les 5 cartes contenues dans le pack. Au moins l'une des cartes est "Rare" et aucune n'est "Basique". Les cartes sont directement ajoutés à la collection du joueur.
 SN05: Le système affiche les 5 cartes contenues dans le pack et un bouton "Continuer".
 SN06: Le joueur clique sur "Continuer".
 
